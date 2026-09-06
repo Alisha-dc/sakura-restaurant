@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        CHARACTER SET
+        Allows the browser to correctly display
+        normal text and Japanese characters.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        VIEWPORT
+        Makes the website responsive on mobile devices.
+    -->
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <!--
+        DESCRIPTION
+        Helps describe the website to search engines
+        and accessibility tools.
+    -->
+    <meta name="description"
+        content="Sakura Japananese Resturant offers fresh sushi, ramen,bento and traditional Japanese dining">
+
+    <title> Sakura Japanese Resturant </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Sakura
+
+                <span>桜</span>
+            </a>
+            <!--
+                MOBILE MENU BUTTON
+
+                This button appears on small screens.
+                JavaScript opens and closes the navigation.
+            -->
+            <button class="menu-toggle" id="menutoggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navlinks">
+                ☰
+            </button>
+            <ul class="nav-links" id="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <!--aria current tells the  current page -->
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Reservation</a></li>
+                <li><button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">
+                        🌙
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header">
+            <p class="small-heading">
+                Reservation
+            </p>
+            <h1>Reserve a Table</h1>
+            <p> We look forward to welcome you.</p>
+        </section>
+        <!--contact + form-->
+        <section class="section">
+            <div class="contact-fm">
+
+                <!--resturant info-->
+                <article class="contact-information">
+                    <p class="small-heading">
+                        VISIT US
+                    </p>
+                    <h2 id="reserve">
+                        Sakura Japanese Resturant
+                    </h2>
+                    <p>Book a table for lunch,dinner or your next special occasion.</p>
+
+                    <!--address-->
+                    <div class="contact-inf">
+                        <span>🎈</span>
+                        <div>
+                            <h3>
+                                Address
+                            </h3>
+                            <address>25 Sakura Street, Sydney NSW</address>
+                        </div>
+                    </div>
+
+
+                    <!--phone-->
+                    <div class="contact-inf">
+                        <span>📞</span>
+                        <div>
+                            <h3>
+                                Phone
+                            </h3>
+                            <p>
+                                <a href="tel:+6100004562">
+                                    +6100004562
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--email-->
+                    <div class="contact-inf">
+                        <span>✉️</span>
+                        <div>
+                            <h3>
+                                Email
+                            </h3>
+                            <p>
+                                <a href="mailto:booking@sakura.com"><!--mailto is protocol that opens default user current mail-->
+                                    booking@sakura.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- opening hrs -->
+                    <div class="contact-inf">
+                        <span>🕑</span>
+                        <div>
+                            <h3>
+                                Opening hours
+                            </h3>
+                            <p class="opening-hours-row">
+                                <span>Mon - Fri:</span>
+                                <span>10:00AM - 8:00PM</span>
+                            </p>
+                            <p class="opening-hours-row">
+                                <span>Sat - Sun:</span>
+                                <span>10:00AM - 10:30PM</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!--Reservation Form -->
+
+                <div class="form">
+                    <h2>Reservation Form</h2>
+                    <form id="reservationForm" novalidate>
+                        <div class="fm-grp">
+                            <label for="name">
+                                Full Name
+                            </label>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
+                            <small class="error-message" id="nameError"></small>
+                        </div>
+                        <div class="fm-grp">
+                            <!--email-->
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="example@email.com" required>
+                            <small class="error-message" id="emailError">
+                            </small>
+                            <!--phone-->
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="04xx xxx xxx" required>
+                            <small class="error-message" id="phoneError">
+
+                            </small>
+                        </div>
+                        <!--date and time-->
+
+                        <div class="form-row">
+                            <div class="fm-grp">
+                                <label for="date">
+                                    Date
+                                </label>
+                                <input type="date" id="date" required>
+                                <small class="error-message" id="dateError"></small>
+                            </div>
+                            <div class="fm-grp">
+
+                                <label for="time">
+                                    Time
+                                </label>
+                                <select id="time" name="time" required>
+                                    <option value="">
+                                        Select time
+                                    </option>
+                                    <option value="12:00PM">
+                                        12:00PM
+                                    </option>
+                                    <option value="1:00PM">
+                                        1:00PM
+                                    </option>
+                                    <option value="5:00PM">
+                                        5:00PM
+                                    </option>
+                                    <option value="7:30PM">
+                                        7:30PM
+                                    </option>
+
+                                </select>
+                                <small class="error-message" id="timeError"></small>
+                            </div>
+                            <div class="fm-grp">
+                                <label for="guest"> Number of Guest</label>
+                                <select id="guest" name="guest" required>
+                                    <option value="">
+                                        Select guests
+                                    </option>
+                                    <option value=" 1">
+                                        1 guest
+                                    </option>
+                                    <option value="2">
+                                        2 guests
+                                    </option>
+                                    <option value="3">
+                                        3 guests
+                                    </option>
+                                    <option value="4">
+                                        4 guests
+                                    </option>
+                                    <option value="5">
+                                        5 guests
+                                    </option>
+                                    <option value="6+">
+                                        6+ guests
+                                    </option>
+                                </select>
+                                <small class="error-message" id="guestError"></small>
+                            </div>
+                            <!--special request-->
+                            <div class="fm-grp">
+                                <label for="message">
+                                    Special Request
+                                </label>
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Tell us about any special requests "></textarea>
+                            </div>
+
+                            <!--Submit-->
+                            <button type="submit" class="btn cont-btn">Reserve Table</button>
+                            <p id="formSuccess" class="success">
+
+                            </p>
+                    </form>
+
+                </div>
+
+        </section>
+        <!--  FAQ Section-->
+        <section class="section faq">
+            <div class="section-heading">
+                <p class="small-heading">
+                    FAQ
+                </p>
+                <h2 id="faq-heading">
+                    Frequently Asked Questions
+                </h2>
+
+            </div>
+            <div class="faq-cont">
+
+                <!--FAQ1-->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <span>DO I need to make a reservation ?</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+                    </button>
+                    <div class="answer">
+                        <p>Reservations are recommended ,especially during weekends and public holidays .</p>
+                    </div>
+                </article>
+                <!--faq2-->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I change my reservation?</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+                    <div class="answer">
+                        <p> Yes . Please contact our resturant , if you need to chnage your booking.</p>
+                    </div>
+                </article>
+                <!--faq3-->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you have vegetarian options ?</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+                    <div class="answer">
+                        <p> Yes . We provide several vegetarian dishes. Please speak with our staff about available
+                            options
+                            .</p>
+                    </div>
+                </article>
+                <!--faq4-->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I book for a large group ?</span>
+                        <span aria-hidden="true">
+                            +
+                        </span>
+
+                    </button>
+                    <div class="answer">
+                        <p> Our online form supports groups of up to siz guests . Please contact us directly for larger
+                            groups .</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer">
+            <div>
+                <h2>Sakura Japanese Resturant</h2>
+                <p>Authentic flavours and warm hospitality.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+                    <li><a href="contact.html">Reservation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <address>
+                    <p>25 Sakura Street</p>
+                    <p>Sydney NSW</p>
+                    <p><a href="tel:+6100004562"> +61 0000 4562</a></p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> &copy; 2026 Sakura Japanese Restaurant.
+                All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

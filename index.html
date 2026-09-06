@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        CHARACTER SET
+        Allows the browser to correctly display
+        normal text and Japanese characters.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        VIEWPORT
+        Makes the website responsive on mobile devices.
+    -->
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <!--
+        DESCRIPTION
+        Helps describe the website to search engines
+        and accessibility tools.
+    -->
+    <meta name="description"
+        content="Sakura Japananese Resturant offers fresh sushi, ramen,bento and traditional Japanese dining">
+
+    <title> Sakura Japanese Resturant </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Sakura
+
+                <span>桜</span>
+            </a>
+            <!--
+                MOBILE MENU BUTTON
+
+                This button appears on small screens.
+                JavaScript opens and closes the navigation.
+            -->
+            <button class="menu-toggle" id="menutoggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navlinks">
+                ☰
+            </button>
+            <ul class="nav-links" id="navlinks">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <!--aria current tells the  current page -->
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Reservation</a></li>
+                <li><button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">
+                        🌙
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="small-heading">
+                    Welcome to SAKURA
+
+                </p>
+                <h1>
+                    Authentic , Japanese flavours,
+                    <span>made with care .</span>
+                </h1>
+                <p class="hero-description">
+                    Enjoy fresh sushi,delicious ramen and traditional Japanese dishes in a warm and welcoming
+                    atmosphere.
+
+                </p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class=" btn menu-btn">Explore Menu</a>
+                    <a href="contact.html" class="btn contact-btn">Reserve a Table</a>
+
+                </div>
+            </div>
+        </section>
+        <!--Explains the resturant concept-->
+        <section class="section" aria-labelledby="story-heading">
+            <div class="section-heading">
+                <p class="small-heading">OUR STORY</p>
+                <h2 id="story-heading">
+                    A taste of Japan in every taste.
+                </h2>
+                <p>Sakura Japanese Resturant brings traditional Japanese flavours together with a modern and welcoming
+                    dining experience.</p>
+
+            </div>
+        </section>
+        <!-- three Section cards -->
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">🍣</div>
+                <h3>Fresh Ingredients</h3>
+                <p>We use carefully selected ingredients to create fresh and enjoyable dishes.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">
+                    🧑‍🍳
+                </div>
+                <h3>Skilled chefs</h3>
+                <p>Our chefs prepare each dish with attention to presentation and flavour.</p>
+            </article>
+            <article class="feature-card">
+                <div class="feature-icon" aria-hidden="true">❤️</div>
+                <h3>Warm Hospitality</h3>
+                <p>Our goal is to provide every guest with a comfortable dining experience.</p>
+            </article>
+        </div>
+
+        <!-- Popular dishes -->
+        <section class="section popular-section" aria-labelledby="popular-heading">
+            <div class="section-heading">
+                <p class="small-heading">CUSTOMER FAVOURITES</p>
+                <h2 id="popular-heading">Popular dishes</h2>
+                <p>Try some of our most popular Japanese dishes.</p>
+            </div>
+
+            <div class="dish-grid">
+                <article class="dish-card">
+                    <img src="images/sushi&roll.png" alt="Fresh salmon sushi and rolls">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Sushi Selection</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p>Fresh salmon sushi and salmon rolls.</p>
+                    </div>
+                </article>
+
+                <article class="dish-card">
+                    <img src="images/ramen.png" alt="Japanese ramen bowl with noodles and vegetables">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Ramen</h3>
+                            <span class="price">$16</span>
+                        </div>
+                        <p>Rich broth with noodles, vegetables and toppings.</p>
+                    </div>
+                </article>
+
+                <article class="dish-card">
+                    <img src="images/bento.png" alt="Japanese bento box with rice and side dishes">
+                    <div class="dish-content">
+                        <div class="dish-header">
+                            <h3>Sakura Bento</h3>
+                            <span class="price">$20</span>
+                        </div>
+                        <p>Rice, vegetables and seasonal Japanese dishes.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!--Opening hours -->
+        <section class="hours-selection">
+            <div class="hours-content">
+                <p class="small-heading">
+                    Visit us
+                </p>
+                <h2 id="hours-heading">
+                    Opening hours
+                </h2>
+                <div class="hours-list">
+                    <div>
+                        <span>Monday - Friday</span>
+                        <strong>10:00 AM - 8:00 PM</strong>
+                    </div>
+                    <div>
+                        <span>Saturday - Sunday</span>
+                        <strong>10:00 AM - 10:30 PM</strong>
+                    </div>
+                </div>
+                <a href="contact.html" class="cont-btn">
+                    Make a Reservation
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!---Footer-->
+        <footer class="site-footer">
+            <div class="footer">
+                <div>
+                    <h2>Sakura Japanese Resturant</h2>
+                    <p>Authentic flavours and warm hospitality.</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+
+                        </li>
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+                        <li><a href="contact.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <address>
+                        <p>25 Sakura Street</p>
+                        <p>Sydney NSW</p>
+                        <p><a href="tel:+6100004562">+61 0000 4562</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> &copy; 2026 Sakura Japanese Restaurant.
+                    All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        CHARACTER SET
+        Allows the browser to correctly display
+        normal text and Japanese characters.
+    -->
+    <meta charset="UTF-8">
+    <!--
+        VIEWPORT
+        Makes the website responsive on mobile devices.
+    -->
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <!--
+        DESCRIPTION
+        Helps describe the website to search engines
+        and accessibility tools.
+    -->
+    <meta name="description"
+        content="Sakura Japananese Resturant offers fresh sushi, ramen,bento and traditional Japanese dining">
+
+    <title> Sakura Japanese Resturant </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Sakura
+
+                <span>桜</span>
+            </a>
+            <!--
+                MOBILE MENU BUTTON
+
+                This button appears on small screens.
+                JavaScript opens and closes the navigation.
+            -->
+            <button class="menu-toggle" id="menutoggle" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="navlinks">
+                ☰
+            </button>
+            <ul class="nav-links" id="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <!--aria current tells the  current page -->
+                <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+                <li><a href="contact.html">Reservation</a></li>
+                <li><button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">
+                        🌙
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="page-header">
+            <p class="small-heading">
+                OUR MENU
+            </p>
+            <h1>Japanese favourites</h1>
+            <p>Fresh dishes prepared with care .</p>
+        </section>
+
+        <!--Menu Selection-->
+        <section class="section">
+            <div class="section-heading">
+                <h2 id="menu-heading">
+                    Explore our menu
+                </h2>
+                <p>Choose a category to explore our dishes.</p>
+            </div>
+            <!--buttons-->
+            <div class="menu-buttons">
+                <button class="menu-button active-btn" data-filter="all">
+                    All
+                </button>
+                <button class="menu-button" data-filter="sushi">
+                    Sushi
+                </button>
+                <button class="menu-button" data-filter="ramen">
+                    Ramen
+                </button>
+                <button class="menu-button" data-filter="bento">
+                    Bento
+                </button>
+                <button class="menu-button" data-filter="meals">
+                    Meals
+                </button>
+                <button class="menu-button" data-filter="entree">
+                    Entree
+                </button>
+            </div>
+
+            <!--menu-->
+            <div class="menu">
+                <article class="menu-card" data-category="sushi">
+                    <img src="images\sushi&roll.png" alt="All roll and sushi made up of salmon">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Sushi</h3>
+                            <span class="price">$18</span>
+
+                        </div>
+                        <p>Fresh salmon sushi and salmon roll </p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="sushi">
+                    <img src="images\combination.png" alt=" Combination sushi , sashimi , roll">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Combination</h3>
+                            <span class="price">$18</span>
+
+                        </div>
+                        <p>Combination of sushi, sashimi and roll </p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="sushi">
+                    <img src="images\nigiri.png" alt=" Grilled sushi">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Nigiri</h3>
+                            <span class="price">$2.30</span>
+
+                        </div>
+                        <p>Grilled Sushi </p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="ramen">
+                    <img src="images\ramen.png" alt=" Bowl of Japanese Ramen">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Ramen</h3>
+                            <span class="price">$15</span>
+
+                        </div>
+                        <p>Soy-based broth with noodles,egg,chicken,corn
+                            and fresh vegetables.</p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="sushi">
+                    <img src="images\kastu.png" alt="Kastu roll">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Roll</h3>
+                            <span class="price">$7.00</span>
+
+                        </div>
+                        <p>Kastu Roll </p>
+                    </div>
+
+                </article>
+
+                <article class="menu-card" data-category="bento">
+                    <img src="images/bento.png" alt=" Rice, salad,with your choice of chicken">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Bento</h3>
+                            <span class="price">$22</span>
+
+                        </div>
+                        <p>Rice, sushi,selection of chicken,and also side of miso </p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="meals">
+                    <img src="images/curry.png" alt=" Curry prepared with vegies  and served with  fried chicken">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Curry</h3>
+                            <span class="price">$20</span>
+
+                        </div>
+                        <p>Rice, vegetable curry, fried chicken , salad side of miso </p>
+                    </div>
+
+                </article>
+                <article class="menu-card" data-category="entree">
+                    <img src="images\karage.png">
+                    <div class="menu-card-content">
+                        <div class="menu-title">
+                            <h3>Karage</h3>
+                            <span class="price">$14</span>
+
+                        </div>
+                        <p>Special japanese fried chicken </p>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <section class="ready-section">
+            <h2>Ready for a Japanese dining<br>
+                experience ?
+            </h2>
+            <p>Reserve your table today.</p>
+            <a href="contact.html" class="cont-btn">
+                Reserve a Table
+            </a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer">
+            <div>
+                <h2>Sakura Japanese Resturant</h2>
+                <p>Authentic flavours and warm hospitality.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+                    <li><a href="contact.html">Reservation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <address>
+                    <p>25 Sakura Street</p>
+                    <p>Sydney NSW</p>
+                    <p><a href="tel:+6100004562">+61 0000 4562</a></p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> &copy; 2026 Sakura Japanese Restaurant.
+                All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
